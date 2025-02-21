@@ -27,7 +27,7 @@ const Navbar = () => {
                 <img className="h-10 w-10" src={logo} alt="" />
                 FileUp</Link>
             </div>
-            <div className="flex-none gap-4">
+            <div className="flex-none gap-4 items-center">
                 <div className="dropdown dropdown-end">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
                         <div className="indicator">
@@ -50,7 +50,7 @@ const Navbar = () => {
                         </div>
                     </div> */}
                 </div>
-                <div>
+                <div className="mx-2">
                     <Theme></Theme>
                 </div>
                 <div className="dropdown dropdown-end">

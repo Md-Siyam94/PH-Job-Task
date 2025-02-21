@@ -2,17 +2,31 @@ import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../context/AuthProvider";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 
 const Login = () => {
-    const {loginWithGoogle} = useContext(AuthContext)
+    const { loginWithGoogle } = useContext(AuthContext)
     const navigate = useNavigate()
 
     const handleLogin = () => {
         loginWithGoogle()
             .then(result => {
-                // console.log("from google log", result);
-                navigate("/")
+                console.log("from google log", result?.user?.displayName);
+                const userInfo = {
+                    name: result?.user?.displayName,
+                    email: result?.user?.email,
+                    image: result?.user?.photoURL,
+                }
+                axios.post(`${import.meta.env.VITE_baseURL}/users`, userInfo)
+                    .then(res => {
+                        if (res.data?.insertedId) {
+                            navigate("/")
+                        }
+                    })
+                    .catch(err => {
+                        console.log(err);
+                    })
             })
             .catch(err => {
                 console.log(err);
@@ -24,8 +38,7 @@ const Login = () => {
                 <div className="text-center  lg:text-left">
                     <h1 className="text-5xl font-bold">Login now!</h1>
                     <p className="py-6">
-                        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                        quasi. In deleniti eaque aut repudiandae et a id nisi.
+                        This page is only available for registered users. Please log in to proceed.
                     </p>
                 </div>
                 <div className="">

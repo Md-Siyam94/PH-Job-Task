@@ -1,0 +1,18 @@
+[
+
+    {
+        "columnId": 0,
+        "columnTitle": "To-Do"
+
+    },
+    {
+        "columnId": 1,
+        "columnTitle": "In Progress"
+
+    },
+    {
+        "columnId": 2,
+        "columnTitle": "Done"
+
+    }
+]

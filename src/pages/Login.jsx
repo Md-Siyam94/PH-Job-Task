@@ -20,9 +20,8 @@ const Login = () => {
                 }
                 axios.post(`${import.meta.env.VITE_baseURL}/users`, userInfo)
                     .then(res => {
-                        if (res.data?.insertedId) {
-                            navigate("/")
-                        }
+                        console.log(res.data);
+                        navigate("/")
                     })
                     .catch(err => {
                         console.log(err);

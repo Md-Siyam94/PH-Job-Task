@@ -1,17 +1,17 @@
 [
 
     {
-        "columnId": 0,
+        "id": 1,
         "columnTitle": "To-Do"
 
     },
     {
-        "columnId": 1,
+        "id": 2,
         "columnTitle": "In Progress"
 
     },
     {
-        "columnId": 2,
+        "id": 3,
         "columnTitle": "Done"
 
     }

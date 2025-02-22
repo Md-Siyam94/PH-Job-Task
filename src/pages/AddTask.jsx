@@ -4,20 +4,22 @@ import { AuthContext } from "../context/AuthProvider";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2'
-
+import { format } from 'date-fns';
 const AddTask = () => {
     const { user } = useContext(AuthContext)
     const navigate = useNavigate()
     const { register, handleSubmit,reset, formState: { errors } } = useForm();
     const onSubmit = data => {
         // console.log(data)
+        const date = new Date();
+        const addingDate = format(date, 'dd/MM/yyyy');
         const task = {
             name: user?.displayName,
             email: user?.email,
             image: user?.photoURL,
             title: data?.title,
             description: data.description,
-            addingTime: new Date().toDateString,
+            addingTime: addingDate,
             status: "To-Do"
         }
 

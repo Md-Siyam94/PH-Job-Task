@@ -1,8 +1,29 @@
-# React + Vite
+## Description
+This Task Management System is a MERN stack project that helps users efficiently organize, track, and manage their tasks. It features a Kanban board with three columns: To-Do, In Progress, and Done, allowing users to drag and drop tasks between stages.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Live Link :
+[https://ph-task-management.netlify.app/]
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Dependencies
+ Drag and Drop (DND-Kit)
+- @dnd-kit/core 
+- @dnd-kit/modifiers 
+- @dnd-kit/sortable 
+ State & Data Management
+- @tanstack/react-query
+- axios 
+ Date & Time Handling
+- date-fns 
+- moment 
+ Authentication & Storage
+- firebase .
+- localforage 
+ UI & Styling
+- react-icons 
+- react-spinners 
+- react-tooltip 
+- sweetalert2 
+ Core React Libraries
+- react & react-dom 
+- react-hook-form 
+- react-router-dom 

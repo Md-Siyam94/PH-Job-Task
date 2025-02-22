@@ -19,6 +19,8 @@ import {
   QueryClientProvider,
   useQuery,
 } from '@tanstack/react-query'
+import EditTask from './pages/EditTask.jsx';
+import DeleteTask from './pages/DeleteTask.jsx';
 
 const queryClient = new QueryClient()
 
@@ -36,6 +38,15 @@ const router = createBrowserRouter([
         path: "/add-task",
         element: <PrivetRoute><AddTask></AddTask></PrivetRoute>
       },
+      {
+        path: "/edit-task",
+        element: <PrivetRoute><EditTask/></PrivetRoute>
+      },
+      {
+        path: "/delete-task",
+        element: <PrivetRoute><DeleteTask/></PrivetRoute>
+      },
+
       {
         path: "/login",
         element: <Login></Login>

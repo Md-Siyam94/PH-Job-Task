@@ -2,18 +2,12 @@
 import { useDroppable } from '@dnd-kit/core';
 import TaskCard from './TaskCard';
 
-
-
 const ColumnCard = ({ column, tasks, refetch }) => {
 
     const { columnTitle, id} = column || {}
-    
-
     const {setNodeRef} = useDroppable({
             id:column.id
     })
-
- 
 
     return (
         <div ref={setNodeRef} className=" lg:w-96 w-[95%]  mx-auto">

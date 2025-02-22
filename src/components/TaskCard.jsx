@@ -32,7 +32,7 @@ console.log(id);
             if (result.isConfirmed) {
                 axios.delete(`${import.meta.env.VITE_baseURL}/tasks/${id}`)
                     .then(res => {
-                        console.log(res.data);
+                        // console.log(res.data);
                         if (res.data?.deletedCount > 0) {
                             refetch()
                             Swal.fire({

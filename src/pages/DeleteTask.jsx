@@ -5,7 +5,7 @@ import ColumnCard from '../components/ColumnCard'
 const DeleteTask = () => {
     const [columns, setColumns] = useState([])
     const [tasks, refetch] = useTask()
-    console.log(tasks);
+    // console.log(tasks);
     useEffect(() => {
         axios.get("/column.json")
             .then(res => {

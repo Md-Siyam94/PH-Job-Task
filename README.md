@@ -27,3 +27,7 @@ This Task Management System is a MERN stack project that helps users efficiently
 - react & react-dom 
 - react-hook-form 
 - react-router-dom 
+
+## Technology
+
+React.js, Tailwind CSS, DND Kit, React Query, Axios, Firebase, Node.js, Express.js, MongoDB (Atlas).

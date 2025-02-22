@@ -43,7 +43,7 @@ const AddTask = () => {
                 console.log(err);
             })
 
-        console.log(task);
+        // console.log(task);
     };
 
     return (
